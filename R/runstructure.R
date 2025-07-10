@@ -48,13 +48,13 @@ gl.run.structure <- function(x,
   }
   
   # SET VERBOSITY
-  #verbose <- gl.check.verbosity(verbose)
+  verbose <- dartR.base::gl.check.verbosity(verbose)
   
   # FLAG SCRIPT START
-  #funname <- match.call()[[1]]
-  #utils.flag.start(func = funname,
-   #                build = "Jody",
-    #               verbose = verbose)
+  funname <- match.call()[[1]]
+  dartR.base::utils.flag.start(func = funname,
+                   build = "Jody",
+                   verbose = verbose)
   
   # CHECK DATATYPE
   #datatype <- utils.check.datatype(x, verbose = verbose)
@@ -98,17 +98,6 @@ gl.run.structure <- function(x,
   
   # check that Structure is installed
   structure <- Sys.which("structure")
-  
-  if (!structure) {
-    stop(error(
-      paste(
-        "Cannot find Structure executable in the exex path provided:\n",
-        exec,
-        "\nCheck the help page of ?gl.run.structure on how to download and the exec
-parameter to locate it."
-      )
-    ))
-  }
 
   
   # DO THE JOB
