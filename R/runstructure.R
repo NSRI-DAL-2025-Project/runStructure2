@@ -76,6 +76,8 @@ gl.run.structure <- function(x,
   file <- lapply(file, function(x) gsub("|", "/", x, fixed = TRUE))
   file <- as.data.frame(file)
   
+  library(dplyr)
+  
   file[is.na(file)] <- "N"
   file <- file %>%
     mutate(across(everything(), ~ case_when(
