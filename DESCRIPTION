@@ -1,0 +1,13 @@
+Package: runStructure
+Type: Package
+Title: Runs Structure and fastStructure in R
+Version: 0.0.1.0
+Depends: R (>= 4.0.0)
+Imports:
+    purrr,
+    gsubfn,
+    dartR,
+    dartRverse,
+    dartR.base
+Encoding: UTF-8
+RoxygenNote: 7.3.2
