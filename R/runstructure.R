@@ -48,7 +48,7 @@ gl.run.structure <- function(x,
   }
   
   # SET VERBOSITY
-  verbose <- gl.check.verbosity(verbose)
+  #verbose <- gl.check.verbosity(verbose)
   
   # FLAG SCRIPT START
   funname <- match.call()[[1]]
