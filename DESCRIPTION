@@ -7,7 +7,6 @@ Imports:
     purrr,
     gsubfn,
     dartR,
-    dartRverse,
-    dartR.base
+    dartRverse
 Encoding: UTF-8
 RoxygenNote: 7.3.2
