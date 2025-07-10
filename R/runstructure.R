@@ -59,11 +59,11 @@ gl.run.structure <- function(x,
   # CHECK DATATYPE
   #datatype <- utils.check.datatype(x, verbose = verbose)
   
-  if (datatype != "SNP") {
-    stop(error(
-      "You need to provide a SNP genlight object (ploidy=2)!"
-    ))
-  }
+  #if (datatype != "SNP") {
+   # stop(error(
+   #   "You need to provide a SNP genlight object (ploidy=2)!"
+   # ))
+  #}
   
   if (tools::file_ext(x) == "csv") {
     file <- readr::read_csv(x)
