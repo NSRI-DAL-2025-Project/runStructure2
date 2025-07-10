@@ -51,13 +51,13 @@ gl.run.structure <- function(x,
   #verbose <- gl.check.verbosity(verbose)
   
   # FLAG SCRIPT START
-  funname <- match.call()[[1]]
-  utils.flag.start(func = funname,
+  #funname <- match.call()[[1]]
+  #utils.flag.start(func = funname,
                    build = "Jody",
                    verbose = verbose)
   
   # CHECK DATATYPE
-  datatype <- utils.check.datatype(x, verbose = verbose)
+  #datatype <- utils.check.datatype(x, verbose = verbose)
   
   if (datatype != "SNP") {
     stop(error(
