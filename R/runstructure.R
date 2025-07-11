@@ -75,14 +75,13 @@ utils.flag.start <- function(func = NULL,
             "\n[dartR.base vers.",
             packageVersion("dartR.base"),
             "Build =",
-            build,
-            "]\n"
+            build
           )
       } else {
-        stringr::str_c("Starting", func, "\n")
+        stringr::str_c("Starting", func)
       }
     } else {
-      stringr::str_c("Starting", func, "\n")
+      stringr::str_c("Starting", func)
     }
   }
   invisible(func)
@@ -207,7 +206,7 @@ gl.run.structure <- function(x,
   
   # FLAG SCRIPT END
   if (verbose >= 1) {
-    stringr::str_c("Completed:", funname, "\n\n")
+    stringr::str_c("Completed:", funname)
   }
   
   # RETURN
