@@ -47,8 +47,6 @@ gl.run.structure <- function(x,
     return(-1)
   }
   
-  library(dartR.base)
-  
   # SET VERBOSITY
   verbose <- dartR.base::gl.check.verbosity(verbose)
   
