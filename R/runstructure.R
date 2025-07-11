@@ -69,8 +69,7 @@ utils.flag.start <- function(func = NULL,
   if (verbose >= 1) {
     if (verbose == 5) {
       if (!is.null(build)) {
-        cat(
-          report::report(
+          str_c(
             "Starting",
             func,
             "\n[dartR.base vers.",
@@ -79,12 +78,11 @@ utils.flag.start <- function(func = NULL,
             build,
             "]\n"
           )
-        )
       } else {
-        cat(report::report("Starting", func, "\n"))
+        str_c("Starting", func, "\n")
       }
     } else {
-      cat(report::report("Starting", func, "\n"))
+      str_c("Starting", func, "\n")
     }
   }
   invisible(func)
@@ -193,25 +191,23 @@ gl.run.structure <- function(x,
     # saving to tempdir
     saveRDS(pa, file = temp_plot)
     if (verbose >= 2) {
-      cat(
-        report::report(
+      str_c(
           "  Saving the plot in ggplot format to the tempfile as",
           temp_plot,
           "using saveRDS\n"
         )
-      )
-      cat(
-        report::report(
+      
+      str_c(
           "  NOTE: Retrieve output files from tempdir using 
                         gl.list.reports() and gl.print.reports()\n"
         )
-      )
+      
     }
   }
   
   # FLAG SCRIPT END
   if (verbose >= 1) {
-    cat(report::report("Completed:", funname, "\n\n"))
+    str_c("Completed:", funname, "\n\n")
   }
   
   # RETURN
